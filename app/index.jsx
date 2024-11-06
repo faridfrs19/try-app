@@ -23,6 +23,7 @@ export default function Index() {
         flex: 1,
       }}
     >
+      <Text>{user?.fullName}</Text>
       {user ?
         <Redirect href={'/(tabs)/home'} />
         : <Redirect href={'/login/index'} />
