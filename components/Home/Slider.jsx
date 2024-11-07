@@ -6,7 +6,6 @@ import { db } from '../../config/FirebaseConfig'
 export default function Slider() {
     const [sliderList, setSliderList]=useState([]);
 
-
     useEffect(()=>{
         GetSliders();
     }, [])
@@ -19,6 +18,7 @@ export default function Slider() {
             setSliderList(sliderList=>[...sliderList,doc.data()])
         })
     }
+
   return (
     <View style={{
         marginTop:15
