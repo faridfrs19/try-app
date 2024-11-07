@@ -29,7 +29,8 @@ export default function Category({category}) {
     }}>
       <Text style={{
         fontFamily:'sen-medium',
-        fontSize:20
+        fontSize:20,
+        marginBottom:10
       }}>Category</Text>
 
       <FlatList 

@@ -36,7 +36,7 @@ export default function AppListByCategory() {
         <FlatList
         data={appList}
         style={{
-          marginTop:10
+          marginTop:15
         }}
         horizontal={true}
         refreshing={loader}
