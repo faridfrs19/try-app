@@ -1,10 +1,18 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import Colors from '../../constants/Colors'
+import { useRouter } from 'expo-router';
+import { TouchableOpacity } from 'react-native';
 
 export default function AppListItem({application}) {
+    const router=useRouter();
   return (
-    <View style={{
+    <TouchableOpacity 
+    onPress={()=>router.push({
+        pathname:'/app-details',
+        params:application
+    })}
+    style={{
         padding:10,
         marginRight:15,
         backgroundColor:Colors.WHITE,
@@ -46,6 +54,6 @@ export default function AppListItem({application}) {
         }}>Rp {application.price}</Text>
       </View>
 
-    </View>
+    </TouchableOpacity>
   )
 }

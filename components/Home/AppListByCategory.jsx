@@ -39,6 +39,7 @@ export default function AppListByCategory() {
           marginTop:15
         }}
         horizontal={true}
+        showsHorizontalScrollIndicator={false}
         refreshing={loader}
         onRefresh={()=>GetAppList('Advertisement')}
         renderItem={({item, index})=>(

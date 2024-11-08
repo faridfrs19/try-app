@@ -55,11 +55,9 @@ export default function Category({category}) {
                         }}
                     />
                 </View>
-                <Text style={{
-                    textAlign:'center',
-                    fontFamily:'sen',
-                    fontSize:12
-                }}>{item?.name}</Text>
+                <Text style={[styles.text,
+                    selectedCategory==item.name&&styles.selectedCategoryText]
+                }>{item?.name}</Text>
             </TouchableOpacity>
         )}
       />
@@ -80,5 +78,13 @@ const styles = StyleSheet.create({
     selectedCategoryContainer:{
         backgroundColor:Colors.WARNING,
         borderColor:Colors.WARNING
+    },
+    text:{
+        textAlign:'center',
+        fontFamily:'sen',
+        fontSize:12
+    },
+    selectedCategoryText:{
+        color:Colors.WARNING
     }
 })
