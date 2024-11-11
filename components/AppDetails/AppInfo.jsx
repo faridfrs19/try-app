@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import Colors from '../../constants/Colors'
-import Ionicons from '@expo/vector-icons/Ionicons';
+import MarkFav from '../MarkFav';
 
 export default function AppInfo({application}) {
   return (
@@ -32,7 +32,7 @@ export default function AppInfo({application}) {
                 color:Colors.GRAY
             }}>{application?.fullname}</Text>
         </View>
-        <Ionicons name="heart-outline" size={30} color="black" />
+        <MarkFav application={application}/>
       </View>
     </View>
   )
